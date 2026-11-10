@@ -55,17 +55,20 @@ addons/amxmodx/plugins/yz_seno_pyramid.amxx
 | Cvar | По умолчанию | Что делает |
 |---|---:|---|
 | `seno_layers` | 8 | число ярусов стога, 8 даёт 204 тюка |
-| `seno_bale_hp` | 1 | прочность тюка, при 1 — один удар ножом |
-| `seno_needle_hp` | 1 | прочность иглы |
+| `seno_bale_hp` | 1000 | прочность тюка: урон накапливается |
+| `seno_needle_hp` | 100 | прочность иглы |
 | `seno_layer_interval` | 0.5 | пауза между слоями при финале, секунды |
 | `seno_bale_size` | 48 | размер тюка, менять нельзя без пересборки |
 
 Переопределяются в `amxmodx/configs/amxx.cfg`, например:
 
 ```
-seno_bale_hp 1
+seno_bale_hp 1000
+seno_needle_hp 100
 seno_layer_interval 0.5
 ```
+
+Если нужен быстрый режим, поставь `seno_bale_hp 1` и `seno_needle_hp 1` — тогда каждый удар ножом разрушает тюк.
 
 ## Как играть
 
